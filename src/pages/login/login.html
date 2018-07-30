@@ -1,0 +1,26 @@
+
+<ion-content padding>
+  <br>
+    <div id="titulo">
+        <h1 style="color: white">Super-Off</h1>
+    <h2 style="color:white">edición supermercados</h2>
+      </div>
+   <br>
+
+    <ion-list>
+      <ion-item>
+        <ion-label floating color="blanco">Usuario</ion-label>
+        <ion-input type="text" style="color:white;" #email #user></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating color="blanco">Contraseña</ion-label>
+        <ion-input type="password" style="color: white;" #password></ion-input>
+      </ion-item>
+    </ion-list><br>
+  <div style="color:white" *ngIf="shows">Usuario y/o contraseña incorrectos</div><br>
+
+
+  <button ion-button full color="blanco" (click)="login()">Iniciar sesión</button>
+
+</ion-content>

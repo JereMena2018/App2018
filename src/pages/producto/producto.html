@@ -1,0 +1,88 @@
+
+<ion-header>
+
+  <ion-navbar color="blue">
+    <ion-title></ion-title>
+    <ion-buttons>
+      <button ion-button (click)="cerrar()">
+        Cerrar
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button (click)="cargar()" [disabled]=" nombre.length <= 1 || fecha.length <= 1 || precio.length <=1 || descuento.length <=1 || preciofinal.length <= 1 || imagenPreview.lenght <=1 " >
+        Cargar producto
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list>
+
+      <ion-item *ngIf="imagenPreview">
+        <img [src]="imagenPreview">
+      </ion-item>
+
+        <ion-item>
+          <ion-label floating>Nombre del producto</ion-label>
+          <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label floating>Fecha de vencimiento</ion-label>
+          <ion-input type="text" [(ngModel)]="fecha"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Precio</ion-label>
+          <ion-input type="text" [(ngModel)]="precio"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Descuento</ion-label>
+          <ion-input type="text" [(ngModel)]="descuento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Precio final del producto</ion-label>
+          <ion-input type="text" [(ngModel)]="preciofinal"></ion-input>
+        </ion-item>
+
+
+      </ion-list>
+  
+  
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <button ion-button icon-left full color="gris" (click)="seleccionar()">
+          <ion-icon name="photos"></ion-icon>
+            Galería
+          </button>
+        </ion-col>
+
+      <ion-col col-6>
+          <button ion-button icon-left full color="gris" (click)="camara()">
+              <ion-icon name="camera"></ion-icon>
+                Camara
+              </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+  
+  
+  
+
+  
+</ion-content>
+
+
+  
